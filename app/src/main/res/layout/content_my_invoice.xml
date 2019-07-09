@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/redwhite_image"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="30dp"
+                android:onClick="backpree"
+                android:layout_height="30dp"
+                android:src="@drawable/arrow_left"/>
+
+            <View
+                android:layout_width="2dp"
+                android:background="@color/red"
+                android:layout_toRightOf="@id/ivClose"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/view"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@id/ivClose"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/large_text_size"
+                android:layout_toRightOf="@id/view"
+                android:layout_marginLeft="5dp"
+                android:text="@string/my_invoice"
+                android:textColor="@color/white"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@id/view"
+                android:layout_marginStart="5dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_below="@+id/toolbar"
+android:hint="0.00ksh"
+    android:gravity="center"
+    android:id="@+id/edtAmount"
+    android:inputType="number"
+    android:textSize="20sp"
+     />
+
+    <android.support.v7.widget.CardView
+        app:cardCornerRadius="8dp"
+        android:layout_below="@+id/edtAmount"
+        android:layout_marginTop="20dp"
+        app:cardElevation="0dp"
+        android:id="@+id/rlInvoiceDetails"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:background="@drawable/red_rectangle_circular"
+                android:text="Current Balance"
+                android:layout_marginTop="35dp"
+                android:id="@+id/tvCurrentBalanceLabel"
+               android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/current_balance_amount"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvCurrentBalance"
+                android:layout_toLeftOf="@id/tvCurrentBalanceLabel"
+                android:textColor="@color/red"
+                android:fontFamily="@font/gentona_book"
+                android:layout_alignBottom="@id/tvCurrentBalanceLabel"
+                android:layout_alignParentEnd="true"
+                android:layout_toStartOf="@id/tvCurrentBalanceLabel" />
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/colorGreySubHeader"
+                android:layout_marginTop="10dp"
+                android:id="@+id/viewCurrentBalance"
+                android:layout_below="@id/tvCurrentBalanceLabel"
+                android:layout_height="1dp"/>
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="50dp"
+                android:layout_below="@+id/viewCurrentBalance"
+                android:id="@+id/ivClientLogo"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/niaivas_super"
+                app:civ_border_color="@color/red"
+                app:civ_border_width="1dp"
+                android:background="@drawable/shadow_circle"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/tvClientName"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+            android:layout_below="@id/viewCurrentBalance"
+             android:layout_toRightOf="@+id/ivClientLogo"
+                android:layout_marginLeft="30dp"
+
+                android:gravity="center"
+                android:text="Cleanself Supermarket"
+                android:textColor="@color/vpi__background_holo_dark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvbranchName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvClientName"
+                android:layout_toRightOf="@+id/ivClientLogo"
+                android:layout_marginLeft="30dp"
+
+                android:gravity="center"
+                android:text="limuru"
+                android:textColor="@color/vpi__background_holo_dark"
+              />
+
+            <View
+                android:layout_width="match_parent"
+                android:background="@color/colorGreySubHeader"
+                android:layout_marginTop="10dp"
+                android:id="@+id/viewCurrent"
+                android:layout_below="@id/tvbranchName"
+                android:layout_height="1dp"/>
+
+            <ImageView
+                android:id="@+id/addnotesimage"
+                android:src="@drawable/ic_control_point"
+                android:layout_below="@+id/viewCurrent"
+                android:layout_marginTop="10dp"
+                android:onClick="notes"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/txtAddnotes"
+                android:text="Add Notes"
+                android:onClick="notes"
+                android:layout_below="@+id/viewCurrent"
+                android:layout_toRightOf="@+id/addnotesimage"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/large_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:src="@drawable/chevron_right_black"
+                android:layout_below="@+id/viewCurrent"
+
+                android:layout_marginTop="20dp"
+              android:layout_alignParentRight="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <TextView
+        android:id="@+id/tvLpoNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@id/edtAmount"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button_red"
+        android:fontFamily="@font/gentona_book"
+        android:text="@string/lpo_number"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/invoicepayments"
+        android:text="Invoice payments"
+        android:textColor="@color/red"
+        android:layout_below="@+id/rlInvoiceDetails"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/large_text_size"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/colorGreySubHeader"
+        android:layout_marginTop="10dp"
+        android:id="@+id/viewInvoicePaymentHeader"
+        android:layout_below="@id/invoicepayments"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@id/viewSeperator"
+        android:layout_below="@id/viewInvoicePaymentHeader"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tvInvoiceDateLabel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/colorGreySubHeader"
+        android:text="@string/invoice_date_label"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/viewSeperator" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@id/viewSeperator"
+        android:layout_below="@id/tvInvoiceDateLabel"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/tvInvoiceDateText"
+        android:textColor="@color/red"
+        android:text="@string/invoice_date_text"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/viewSeperator" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/viewSeperator"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="1dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@id/viewSeperator"
+        android:text="@string/invoice_due_date_label"
+        android:gravity="right"
+        android:textColor="@color/colorGreySubHeader"
+        android:id="@+id/tvInvoiceDueDateLabel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignBottom="@id/tvInvoiceDateLabel"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/viewSeperator"
+         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@id/viewSeperator"
+        android:text="@string/invoice_due_date_text"
+        android:gravity="right"
+        android:textColor="@color/red"
+        android:id="@+id/tvInvoiceDueDateText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignBottom="@id/tvInvoiceDateText"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/viewSeperator"
+         />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@id/tvInvoiceDateText"
+        android:layout_marginTop="10dp"
+        android:id="@+id/viewLast"
+
+        android:background="@color/colorGreySubHeader"
+        android:layout_height="1dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/red"
+        android:text="@string/proceed"
+        android:padding="10dp"
+        android:id="@+id/btnProceed"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

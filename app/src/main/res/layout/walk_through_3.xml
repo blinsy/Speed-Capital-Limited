@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:id="@+id/tvWalkThroughTitle"
+        android:layout_marginTop="20dp"
+        android:textSize="@dimen/large_text_size"
+        android:text="@string/walk_through_three_title"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/walk_through_three_desc"
+        android:gravity="center"
+        android:layout_below="@id/tvWalkThroughTitle"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvWalkThroughDesc"
+        android:textSize="@dimen/large_text_size"
+        android:textColor="@color/colorGreySubHeader"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:src="@drawable/three"
+        android:id="@+id/ivOne"
+        android:layout_below="@id/tvWalkThroughDesc"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="180dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/rlSignIn"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/prompt_text_have_account"
+            android:textColor="@color/red"
+            android:id="@+id/tvLoginPrompt"
+            android:fontFamily="@font/raleway_bold"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorGreySubHeader"
+            android:fontFamily="@font/raleway_bold"
+            android:layout_toRightOf="@id/tvLoginPrompt"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tvLogin"
+            android:text="@string/prompt_text_signin"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/tvLoginPrompt"
+            android:layout_marginStart="10dp" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:background="@color/red"
+        android:layout_marginBottom="20dp"
+        android:text="@string/button_get_started"
+        android:textColor="@color/white"
+        android:padding="20dp"
+        android:textSize="@dimen/large_text_size"
+        android:id="@+id/btnGetStarted"
+        android:layout_above="@+id/rlSignIn"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        app:cardUseCompatPadding="true"
+        app:cardElevation="5px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:background="@color/red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="50dp"
+                app:civ_border_width="1dp"
+                android:fitsSystemWindows="true"
+                android:id="@+id/ivClientPic"
+                android:src="@drawable/tuskys"
+                android:layout_height="50dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/client_lpo_details"
+                android:id="@+id/tvClientName"
+                android:fontFamily="@font/gentona_book"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/ivClientPic"
+                android:layout_alignTop="@id/ivClientPic"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ivClientPic" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/lpo_number_text"
+                android:id="@+id/tvLpoNumber"
+                android:fontFamily="@font/gentona_book"
+                android:layout_below="@id/tvClientName"
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/small_text_size"
+                android:layout_toLeftOf="@id/tvInvoiceDate"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/ivClientPic"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ivClientPic"
+
+                android:layout_marginEnd="10dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Preapproved Payment-Complete"
+                android:id="@+id/tvInvoiceDescription"
+                android:fontFamily="@font/gentona_book"
+                android:layout_below="@id/tvLpoNumber"
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/ivClientPic"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ivClientPic" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tvInvoiceAmount"
+                android:textStyle="bold"
+                android:fontFamily="@font/gentona_book"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@id/tvClientName"
+                android:layout_marginRight="20dp"
+                android:text="@string/invoice_amount"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/invoice_date"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gentona_book"
+                android:layout_alignRight="@id/tvInvoiceAmount"
+                android:layout_alignBottom="@id/tvInvoiceDescription"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvInvoiceDate"
+                android:layout_alignEnd="@id/tvInvoiceAmount" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

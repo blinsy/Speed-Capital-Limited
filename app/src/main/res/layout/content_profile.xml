@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/pink"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:paddingTop="30dp"
+        android:background="@color/red"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/arrow_left"
+                android:id="@+id/ivBack"
+                android:onClick="backpresssed"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/log_out"
+                android:textStyle="bold"
+                android:id="@+id/tvLogOut"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="100dp"
+                android:layout_below="@id/tvLogOut"
+                android:layout_marginTop="20dp"
+                android:id="@+id/ivProfilePic"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_account"
+                android:layout_height="100dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_below="@id/ivProfilePic"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:id="@+id/tvProfileName"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/profile_name"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_alignRight="@id/tvProfileName"
+                android:layout_alignLeft="@id/tvProfileName"
+                android:textStyle="bold"
+                android:layout_below="@id/tvProfileName"
+                android:id="@+id/tvEmail"
+                android:text="@string/profile_email"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_alignEnd="@id/tvProfileName"
+                android:layout_alignStart="@id/tvProfileName" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/rlPaymentOptions"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tvBanksAndCreditCards"
+            android:textColor="@color/vpi__background_holo_dark"
+            android:text="@string/bank_and_credit_cards"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_below="@id/tvBanksAndCreditCards"
+            android:layout_marginTop="15dp"
+            android:alpha="0.3"
+            android:id="@+id/viewBanksAndCreditCards"
+            android:background="@color/colorGreySubHeader"
+            android:layout_height="1dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignLeft="@id/rlPaymentOptions"
+        android:layout_below="@id/rlPaymentOptions"
+        android:layout_alignRight="@id/rlPaymentOptions"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlManageClient"
+        android:layout_alignEnd="@id/rlPaymentOptions"
+        android:layout_alignStart="@id/rlPaymentOptions">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/manage_client"
+            android:layout_marginTop="15dp"
+            android:id="@+id/tvManageClient"
+            android:textColor="@color/vpi__background_holo_dark"
+
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_below="@id/tvManageClient"
+            android:layout_marginTop="15dp"
+            android:alpha="0.3"
+            android:id="@+id/viewManageClient"
+            android:background="@color/colorGreySubHeader"
+            android:layout_height="1dp"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignLeft="@id/rlPaymentOptions"
+        android:layout_below="@id/rlManageClient"
+        android:id="@+id/rlPersonalInformation"
+        android:layout_alignRight="@id/rlPaymentOptions"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/rlPaymentOptions"
+        android:layout_alignStart="@id/rlPaymentOptions">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/personal_information"
+            android:layout_marginTop="15dp"
+            android:id="@+id/tvPersonalInformation"
+            android:textColor="@color/vpi__background_holo_dark"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_below="@id/tvPersonalInformation"
+            android:layout_marginTop="15dp"
+            android:alpha="0.3"
+            android:id="@+id/viewPersonalInformation"
+            android:background="@color/colorGreySubHeader"
+            android:layout_height="1dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignLeft="@id/rlPaymentOptions"
+        android:layout_below="@id/rlPersonalInformation"
+        android:id="@+id/rlLoginAndSecurity"
+        android:layout_alignRight="@id/rlPaymentOptions"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/rlPaymentOptions"
+        android:layout_alignStart="@id/rlPaymentOptions">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/login_and_security"
+            android:layout_marginTop="15dp"
+            android:id="@+id/tvLoginAndSecurity"
+            android:textColor="@color/vpi__background_holo_dark"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_below="@id/tvLoginAndSecurity"
+            android:layout_marginTop="15dp"
+            android:alpha="0.3"
+            android:id="@+id/viewLoginAndSecurity"
+            android:background="@color/colorGreySubHeader"
+            android:layout_height="1dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignLeft="@id/rlPaymentOptions"
+        android:layout_below="@id/rlLoginAndSecurity"
+        android:id="@+id/rlCustomerCareService"
+        android:layout_alignRight="@id/rlPaymentOptions"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/rlPaymentOptions"
+        android:layout_alignStart="@id/rlPaymentOptions">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/contact_customer_service"
+            android:layout_marginTop="15dp"
+            android:id="@+id/tvCustomerCare"
+            android:textColor="@color/vpi__background_holo_dark"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_below="@id/tvCustomerCare"
+            android:layout_marginTop="15dp"
+            android:alpha="0.3"
+            android:id="@+id/viewCustomerCare"
+            android:background="@color/colorGreySubHeader"
+            android:layout_height="1dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

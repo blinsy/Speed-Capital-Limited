@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:application="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/redwhite_image"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/close"/>
+
+        <View
+            android:layout_width="2dp"
+            android:background="@color/red"
+            android:layout_toRightOf="@id/ivClose"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/view"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/ivClose"
+            android:layout_marginStart="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/large_text_size"
+            android:layout_toRightOf="@id/view"
+            android:layout_marginLeft="5dp"
+            android:text="@string/create_password"
+            android:textColor="@color/white"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/view"
+            android:layout_marginStart="5dp" />
+    </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ivSecurity"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/end_verification"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/security_complete_title"
+        android:textColor="@color/red"
+        android:layout_below="@id/ivSecurity"
+        android:id="@+id/tvSecurityTitle"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:id="@+id/tvSecurityDesc"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorGreySubHeader"
+        android:text="@string/security_complete_description"
+        android:layout_below="@id/tvSecurityTitle"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/tlPassword"
+        application:passwordToggleEnabled="true"
+        application:passwordToggleTint="@color/vpi__background_holo_dark"
+        application:passwordToggleDrawable="@drawable/eye"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:hint="@string/enter_password_hint"
+        android:layout_below="@+id/tvSecurityDesc"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtpassword"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:imeOptions="actionNext"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/tlPassword"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/tlConfirmPassword"
+        android:layout_marginTop="10dp"
+        application:passwordToggleEnabled="true"
+        application:passwordToggleTint="@color/vpi__background_holo_dark"
+        application:passwordToggleDrawable="@drawable/eye"
+        android:hint="@string/confirm_password_hint"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/edtConfirmPassword"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/security_complete_continue"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+
+        android:id="@+id/btnContinue"
+        android:onClick="endverification"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/button_back"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

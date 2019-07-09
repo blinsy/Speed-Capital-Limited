@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:background="@color/red"
+        android:text="@string/contact_customer_care"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:id="@+id/tvTitle"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:id="@+id/rlCall"
+        android:layout_below="@id/tvTitle"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_call"
+            android:tint="@color/red"
+            android:id="@+id/ivCall"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/call"
+            android:id="@+id/tvCall"
+            android:layout_alignBottom="@id/ivCall"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/ivCall"
+            android:textColor="@color/vpi__background_holo_dark"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/ivCall"
+            android:layout_marginStart="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/colorGreySubHeader"
+            android:layout_below="@id/tvCall"
+            android:layout_marginTop="10dp"
+            android:layout_height="1dp"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rlText"
+        android:layout_below="@id/rlCall"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_margin="10dp"
+          android:src="@drawable/ic_comment"
+            android:tint="@color/red"
+            android:id="@+id/ivText"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/text"
+            android:id="@+id/tvText"
+            android:layout_alignBottom="@id/ivText"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/ivText"
+            android:textColor="@color/vpi__bright_foreground_holo_light"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/ivText"
+            android:layout_marginStart="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/colorGreySubHeader"
+            android:layout_below="@id/tvText"
+            android:layout_marginTop="10dp"
+            android:layout_height="1dp"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rlEmail"
+        android:layout_below="@id/rlText"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_margin="10dp"
+           android:src="@drawable/ic_email"
+            android:tint="@color/red"
+            android:id="@+id/ivEmail"
+            android:layout_height="30dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:text="@string/send_email"
+            android:id="@+id/tvEmail"
+            android:layout_alignBottom="@id/ivEmail"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/ivEmail"
+            android:textColor="@color/vpi__bright_foreground_holo_light"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/ivEmail"
+            android:layout_marginStart="20dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/colorGreySubHeader"
+            android:layout_below="@id/tvEmail"
+            android:layout_marginTop="10dp"
+            android:layout_height="1dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/redwhite_image"
+    android:layout_gravity="center"
+    tools:context=".Activities.No_Internet_Activity">
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:src="@drawable/no_internet"
+        android:tint="@color/red"
+        android:id="@+id/ivIcon"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/no_internet_connection"
+        android:textSize="@dimen/large_text_size"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:id="@+id/tvNoInternet"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/ivIcon"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="120dp"
+        android:text="@string/retry"
+        android:id="@+id/btnRetry"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvNoInternet"
+        android:background="@drawable/rounded_button_red"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

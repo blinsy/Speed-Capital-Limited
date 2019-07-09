@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/pink"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="30dp"
+                android:onClick="back"
+                android:layout_height="30dp"
+                android:src="@drawable/arrow_left"/>
+
+            <View
+                android:layout_width="2dp"
+                android:background="@color/red"
+                android:layout_toRightOf="@id/ivClose"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/view"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@id/ivClose"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/large_text_size"
+                android:layout_toRightOf="@id/view"
+                android:layout_marginLeft="5dp"
+                android:text="@string/manage_client"
+                android:textColor="@color/white"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@id/view"
+                android:layout_marginStart="5dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/rcvClientTomanage"
+    android:layout_below="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

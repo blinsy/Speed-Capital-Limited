@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+android:padding="10dp"
+    android:id="@+id/parent"
+    android:layout_height="wrap_content">
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="50dp"
+        app:civ_border_width="1dp"
+        android:fitsSystemWindows="true"
+        android:id="@+id/ClientPic"
+        android:src="@drawable/cleanshelf"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@id/ClientPic"
+        android:gravity="center"
+
+        android:id="@+id/tvClientName"
+        android:text="Cleanself supermarket"
+        android:textColor="@color/colorGreySubHeader"
+        android:textSize="@dimen/large_text_size"
+        android:layout_height="50dp"
+
+        />
+
+    <RadioButton
+        android:id="@+id/radio"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+         />
+
+
+</RelativeLayout>

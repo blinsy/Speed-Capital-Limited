@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/red_image"
+    android:paddingTop="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivNotification"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+android:tint="@color/vpi__background_holo_dark"
+        android:src="@drawable/ic_notifications" />
+
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="259dp"
+        android:layout_height="47dp"
+
+
+      android:layout_margin="@dimen/large_text_size"
+        android:layout_toLeftOf="@id/ivSettings"
+        android:layout_toRightOf="@id/ivNotification"
+        android:gravity="center"
+        android:text="@string/speed_capital_invoice_dashboard_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/large_text_size" />
+
+
+    <ImageView
+        android:id="@+id/ivSettings"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:tint="@color/vpi__background_holo_dark"
+        android:src="@drawable/ic_settings" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorGreySubHeader"
+        android:id="@+id/viewTop"
+        android:layout_below="@id/tvAppName"
+        android:layout_height="1dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rlRequestInvoicePayments"
+        android:layout_below="@id/viewTop"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tvMyInvoicePayments"
+            android:textStyle="bold"
+            android:text="@string/my_invoice_payments"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_height="25dp" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="25dp"
+            android:layout_marginRight="15dp"
+          android:src="@drawable/ic_chevron_right"
+            android:id="@+id/ivMoreInvoicePayments"
+            android:layout_alignBottom="@id/tvMyInvoicePayments"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorGreySubHeader"
+        android:id="@+id/viewBelow"
+        android:layout_below="@id/rlRequestInvoicePayments"
+        android:layout_height="1dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/viwAll"
+        android:layout_below="@id/viewBelow"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/Viewall"
+            android:textStyle="bold"
+            android:text="Invoice Activity"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_height="25dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tvViewAll"
+            android:textStyle="bold"
+            android:text="View All"
+
+          android:layout_toStartOf="@+id/ivMoreInvoiceActivity"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_height="25dp"
+
+            android:layout_toLeftOf="@+id/view" />
+
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="25dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_chevron_right"
+            android:id="@+id/ivMoreInvoiceActivity"
+
+            android:layout_alignBottom="@id/Viewall"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcvInvoices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viwAll"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rlBottom"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/red_image"
+        android:layout_height="90dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGreySubHeader"/>
+
+        <ImageView
+            android:id="@+id/ivInvoiceStatus"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_toStartOf="@+id/ivManageClient"
+            android:layout_toLeftOf="@+id/ivManageClient"
+            android:src="@drawable/dots_horizontal_circle" />
+        <TextView
+            android:layout_width="120dp"
+            android:text="@string/invoice_status"
+            android:layout_marginLeft="40dp"
+            android:layout_below="@id/ivInvoiceStatus"
+            android:textColor="@color/white"
+            android:fontFamily="@font/gentona_book"
+            android:textStyle="bold"
+
+            android:id="@+id/tvInvoiceStatus"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp" />
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/ivManageClient"
+            android:src="@drawable/manage_client"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp" />
+
+        <TextView
+            android:id="@+id/tvManageClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivManageClient"
+            android:layout_alignStart="@id/ivManageClient"
+            android:layout_alignLeft="@id/ivManageClient"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/gentona_book"
+            android:gravity="center"
+            android:text="@string/manage_clients"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:id="@+id/tvNotFound"
+        android:visibility="gone"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/no_records_found_you_have_not_requested_invoice_discounting_service"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

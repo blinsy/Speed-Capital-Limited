@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+android:background="@color/pink"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="30dp"
+                android:onClick="back"
+                android:tint="@color/red"
+                android:layout_height="30dp"
+                android:src="@drawable/arrow_left"/>
+
+            <View
+                android:layout_width="2dp"
+                android:background="@color/red"
+                android:layout_toRightOf="@id/ivClose"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/view"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@id/ivClose"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/large_text_size"
+                android:layout_toRightOf="@id/view"
+                android:layout_marginLeft="5dp"
+                android:text="@string/invoice_status"
+                android:textColor="@color/red"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@id/view"
+                android:layout_marginStart="5dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.TabLayout
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        android:background="@color/pink"
+        app:tabTextColor="@color/colorGreySubHeader"
+     app:tabSelectedTextColor="@color/red"
+        app:tabIndicatorColor="@color/red"
+        app:tabIndicatorHeight="1dp"
+        android:id="@+id/tablayout"
+        android:layout_height="wrap_content">
+
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewPager"
+        android:layout_below="@id/tablayout"/>
+
+</RelativeLayout>

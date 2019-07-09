@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:paddingTop="30dp"
+        android:background="@color/pink"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/arrow_left"
+                android:id="@+id/ivBack"
+                android:tint="@color/red"
+                android:onClick="pressback"
+                android:layout_height="30dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:id="@+id/ivEdit"
+                android:layout_marginRight="20dp"
+               android:src="@drawable/ic_pen"
+                android:tint="@color/red"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="80dp"
+                android:layout_below="@id/ivEdit"
+                android:layout_marginTop="20dp"
+                android:id="@+id/ivProfilePic"
+                android:layout_centerHorizontal="true"
+               android:src="@drawable/ic_account"
+                android:layout_height="80dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_below="@id/ivProfilePic"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:id="@+id/tvProfileName"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/profile_name"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_margin="20dp"
+    android:layout_below="@id/toolbar"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:background="@color/pink"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="50dp"
+        android:src="@drawable/ic_call"
+            android:padding="10dp"
+            android:id="@+id/ivCall"
+            android:tint="@color/red"
+            android:layout_height="50dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/ivCall"
+            android:layout_alignTop="@id/ivCall"
+            android:id="@+id/tvPhoneNumberLabel"
+            android:textColor="@color/red"
+            android:text="@string/phone_number_hint"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivCall" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/number"
+            android:layout_below="@id/tvPhoneNumberLabel"
+            android:layout_alignLeft="@id/tvPhoneNumberLabel"
+            android:textColor="@color/vpi__background_holo_dark"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPhoneNumber"
+            android:layout_alignBottom="@id/ivCall"
+            android:layout_alignStart="@id/tvPhoneNumberLabel" />
+
+
+
+        <ImageView
+            android:layout_width="50dp"
+          android:src="@drawable/ic_email"
+            android:tint="@color/red"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/ivEmail"
+            android:layout_below="@id/ivCall"
+            android:layout_height="50dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/email_address_hint"
+            android:layout_alignTop="@id/ivEmail"
+            android:layout_alignLeft="@id/tvPhoneNumberLabel"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:id="@+id/tvEmailLabel"
+            android:layout_alignStart="@id/tvPhoneNumberLabel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/profile_email"
+            android:layout_alignLeft="@id/tvPhoneNumberLabel"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvEmail"
+            android:textColor="@color/vpi__background_holo_dark"
+            android:layout_alignBottom="@id/ivEmail"
+            android:layout_alignStart="@id/tvPhoneNumberLabel" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/ivEditEmail"
+           android:src="@drawable/ic_pen"
+            android:tint="@color/red"
+            android:padding="15dp"
+            android:layout_alignTop="@id/ivEmail"
+            android:layout_alignParentRight="true"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
+</RelativeLayout>

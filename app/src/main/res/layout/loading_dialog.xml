@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="100dp"
+    android:paddingBottom="100dp"
+    android:background="@android:color/transparent"
+    android:paddingRight="80dp"
+    android:paddingLeft="80dp"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:text="@string/loading"
+        style="?android:attr/progressBarStyleInverse"
+        android:indeterminate="true"
+        android:theme="@style/RadioButtonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/loading"
+        android:gravity="center_horizontal"
+        android:textColor="@color/red"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
